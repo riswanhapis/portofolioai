@@ -63,7 +63,7 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-dark relative" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="text-2xl md:text-5xl font-bold mb-4">
             <span className="border-b-4 border-primary pb-2">Hubungi Saya</span>
           </h2>
           <p className="text-gray-400 mt-4">Mari berdiskusi tentang project Anda.</p>

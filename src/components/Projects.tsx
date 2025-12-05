@@ -48,7 +48,7 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-dark relative" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="text-2xl md:text-5xl font-bold mb-4">
             <span className="border-b-4 border-primary pb-2">Portfolio</span>
           </h2>
           <p className="text-gray-400 mt-4">Karya terbaik yang pernah saya buat.</p>

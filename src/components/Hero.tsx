@@ -43,7 +43,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark pt-20" ref={heroRef}>
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark pt-24 md:pt-20" ref={heroRef}>
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
@@ -61,7 +61,7 @@ const Hero = () => {
             Available for Freelance
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight" ref={textRef}>
+          <h1 className="text-4xl md:text-7xl font-bold mb-6 leading-tight" ref={textRef}>
             <span className="block text-white">Cyber Security</span>
             <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">& Web Developer</span>
           </h1>
@@ -82,7 +82,7 @@ const Hero = () => {
 
         {/* Hero Image / Illustration */}
         <div className="flex-1 flex justify-center relative">
-          <div className="relative w-80 h-80 md:w-96 md:h-96">
+          <div className="relative w-full max-w-xs aspect-square md:w-96 md:h-96">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-full blur-2xl opacity-20 animate-pulse"></div>
             <div className="relative w-full h-full rounded-2xl bg-dark-lighter border border-gray-800 flex items-center justify-center overflow-hidden">
                {heroImage ? (

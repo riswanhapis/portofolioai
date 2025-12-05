@@ -73,7 +73,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16" ref={titleRef}>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            <h2 className="text-2xl md:text-5xl font-bold mb-4">
               <span className="border-b-4 border-primary pb-2">Tentang Saya</span>
             </h2>
             <p className="text-gray-400 mt-4">Perjalanan dari nol hingga menjadi profesional.</p>

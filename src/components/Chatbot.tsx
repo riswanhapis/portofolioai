@@ -68,11 +68,11 @@ const Chatbot: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 font-sans">
+    <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 font-sans">
       {/* Chat Window */}
       {isOpen && (
         <div 
-          className="mb-4 w-[350px] h-[500px] bg-slate-900/90 backdrop-blur-lg border border-slate-700 rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in slide-in-from-bottom-10 fade-in duration-300"
+          className="mb-4 w-[90vw] md:w-[350px] h-[500px] bg-slate-900/90 backdrop-blur-lg border border-slate-700 rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in slide-in-from-bottom-10 fade-in duration-300"
         >
           {/* Header */}
           <div className="p-4 bg-gradient-to-r from-primary to-secondary flex justify-between items-center">
