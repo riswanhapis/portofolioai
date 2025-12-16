@@ -18,6 +18,10 @@ body {
   overflow-x: hidden;
 }
 
+section {
+  overflow-x: clip;
+}
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 8px;

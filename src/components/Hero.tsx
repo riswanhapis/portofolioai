@@ -61,7 +61,7 @@ const Hero = () => {
             Available for Freelance
           </div>
           
-          <h1 className="text-4xl md:text-7xl font-bold mb-6 leading-tight" ref={textRef}>
+          <h1 className="text-3xl md:text-7xl font-bold mb-6 leading-tight" ref={textRef}>
             <span className="block text-white">Cyber Security</span>
             <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">& Web Developer</span>
           </h1>
@@ -82,7 +82,7 @@ const Hero = () => {
 
         {/* Hero Image / Illustration */}
         <div className="flex-1 flex justify-center relative">
-          <div className="relative w-full max-w-xs aspect-square md:w-96 md:h-96">
+          <div className="relative w-64 h-64 md:w-96 md:h-96">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-full blur-2xl opacity-20 animate-pulse"></div>
             <div className="relative w-full h-full rounded-2xl bg-dark-lighter border border-gray-800 flex items-center justify-center overflow-hidden">
                {heroImage ? (
@@ -93,13 +93,13 @@ const Hero = () => {
             </div>
             
             {/* Floating Cards */}
-            <div className="absolute -top-4 -right-4 p-4 bg-dark-lighter border border-gray-800 rounded-lg shadow-xl animate-bounce delay-700">
+            <div className="hidden md:block absolute -top-4 -right-4 p-4 bg-dark-lighter border border-gray-800 rounded-lg shadow-xl animate-bounce delay-700">
               <Shield className="text-primary mb-2" />
               <div className="text-xs text-gray-400">Security Audit</div>
               <div className="font-bold text-white">100% Secure</div>
             </div>
             
-            <div className="absolute -bottom-4 -left-4 p-4 bg-dark-lighter border border-gray-800 rounded-lg shadow-xl animate-bounce">
+            <div className="hidden md:block absolute -bottom-4 -left-4 p-4 bg-dark-lighter border border-gray-800 rounded-lg shadow-xl animate-bounce">
               <Code className="text-secondary mb-2" />
               <div className="text-xs text-gray-400">Clean Code</div>
               <div className="font-bold text-white">Modern Stack</div>
