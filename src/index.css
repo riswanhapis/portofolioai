@@ -9,13 +9,21 @@
   color-scheme: dark;
   background-color: #0a0a0a;
   color: rgba(255, 255, 255, 0.87);
+  overflow-x: hidden; /* Prevent horizontal scroll at root */
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  width: 100%;
   overflow-x: hidden;
+  position: relative; /* Ensure body is containment context */
 }
 
 section {
