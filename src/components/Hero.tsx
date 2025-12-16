@@ -93,16 +93,16 @@ const Hero = () => {
             </div>
             
             {/* Floating Cards */}
-            <div className="hidden md:block absolute -top-4 -right-4 p-4 bg-dark-lighter border border-gray-800 rounded-lg shadow-xl animate-bounce delay-700">
-              <Shield className="text-primary mb-2" />
-              <div className="text-xs text-gray-400">Security Audit</div>
-              <div className="font-bold text-white">100% Secure</div>
+            <div className="absolute top-0 right-0 md:-top-4 md:-right-4 p-3 md:p-4 bg-dark-lighter border border-gray-800 rounded-lg shadow-xl animate-bounce delay-700 transform scale-75 md:scale-100 origin-top-right z-20">
+              <Shield className="text-primary mb-2 w-5 h-5 md:w-6 md:h-6" />
+              <div className="text-[10px] md:text-xs text-gray-400">Security Audit</div>
+              <div className="font-bold text-xs md:text-base text-white">100% Secure</div>
             </div>
             
-            <div className="hidden md:block absolute -bottom-4 -left-4 p-4 bg-dark-lighter border border-gray-800 rounded-lg shadow-xl animate-bounce">
-              <Code className="text-secondary mb-2" />
-              <div className="text-xs text-gray-400">Clean Code</div>
-              <div className="font-bold text-white">Modern Stack</div>
+            <div className="absolute bottom-0 left-0 md:-bottom-4 md:-left-4 p-3 md:p-4 bg-dark-lighter border border-gray-800 rounded-lg shadow-xl animate-bounce transform scale-75 md:scale-100 origin-bottom-left z-20">
+              <Code className="text-secondary mb-2 w-5 h-5 md:w-6 md:h-6" />
+              <div className="text-[10px] md:text-xs text-gray-400">Clean Code</div>
+              <div className="font-bold text-xs md:text-base text-white">Modern Stack</div>
             </div>
           </div>
         </div>
