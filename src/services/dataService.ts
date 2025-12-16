@@ -195,6 +195,10 @@ export interface SiteSettings {
   about_description: string;
   skills: string[];
   hero_image_url?: string;
+  contact_phone?: string;
+  contact_address?: string;
+  github_url?: string;
+  linkedin_url?: string;
 }
 
 export interface Message {

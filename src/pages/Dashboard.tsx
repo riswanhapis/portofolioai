@@ -369,12 +369,65 @@ const Dashboard = () => {
                           className="w-full bg-dark border border-gray-700 rounded p-2 text-white"
                         />
                       </div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm text-gray-400 mb-2">Contact Email</label>
+                          <input 
+                            type="email" 
+                            value={settings?.contact_email || ''}
+                            onChange={(e) => setSettings(prev => prev ? { ...prev, contact_email: e.target.value } : null)}
+                            className="w-full bg-dark border border-gray-700 rounded p-2 text-white"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-sm text-gray-400 mb-2">Phone Number</label>
+                          <input 
+                            type="text" 
+                            value={settings?.contact_phone || ''}
+                            onChange={(e) => setSettings(prev => prev ? { ...prev, contact_phone: e.target.value } : null)}
+                            className="w-full bg-dark border border-gray-700 rounded p-2 text-white"
+                          />
+                        </div>
+                        <div className="md:col-span-2">
+                          <label className="block text-sm text-gray-400 mb-2">Address</label>
+                          <input 
+                            type="text" 
+                            value={settings?.contact_address || ''}
+                            onChange={(e) => setSettings(prev => prev ? { ...prev, contact_address: e.target.value } : null)}
+                            className="w-full bg-dark border border-gray-700 rounded p-2 text-white"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-sm text-gray-400 mb-2">GitHub URL</label>
+                          <input 
+                            type="url" 
+                            value={settings?.github_url || ''}
+                            onChange={(e) => setSettings(prev => prev ? { ...prev, github_url: e.target.value } : null)}
+                            className="w-full bg-dark border border-gray-700 rounded p-2 text-white"
+                          />
+                        </div>
+                        <div>
+                          <label className="block text-sm text-gray-400 mb-2">LinkedIn URL</label>
+                          <input 
+                            type="url" 
+                            value={settings?.linkedin_url || ''}
+                            onChange={(e) => setSettings(prev => prev ? { ...prev, linkedin_url: e.target.value } : null)}
+                            className="w-full bg-dark border border-gray-700 rounded p-2 text-white"
+                          />
+                        </div>
+                      </div>
+
                       <button 
                         onClick={async () => {
                           if (settings) await updateSiteSettings({ 
                             site_title: settings.site_title,
                             about_description: settings.about_description,
-                            skills: settings.skills
+                            skills: settings.skills,
+                            contact_email: settings.contact_email,
+                            contact_phone: settings.contact_phone,
+                            contact_address: settings.contact_address,
+                            github_url: settings.github_url,
+                            linkedin_url: settings.linkedin_url
                           });
                           alert('Settings updated!');
                         }}

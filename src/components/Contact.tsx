@@ -2,7 +2,8 @@ import React, { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Mail, Phone, Github, Send, MapPin } from 'lucide-react';
-import { sendMessage } from '../services/dataService';
+import { getSiteSettings, sendMessage } from '../services/dataService';
+import type { SiteSettings } from '../services/dataService';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,8 +14,15 @@ const Contact = () => {
   
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [loading, setLoading] = useState(false);
+  const [settings, setSettings] = useState<SiteSettings | null>(null);
 
   useEffect(() => {
+    const fetchSettings = async () => {
+      const data = await getSiteSettings();
+      setSettings(data);
+    };
+    fetchSettings();
+
     const el = sectionRef.current;
 
     gsap.fromTo(infoRef.current,
@@ -80,7 +88,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-lg font-bold text-white">Alamat</h4>
-                <p className="text-gray-400">Karanganyar, Jawa Tengah</p>
+                <p className="text-gray-400">{settings?.contact_address || 'Karanganyar, Jawa Tengah'}</p>
               </div>
             </div>
 
@@ -90,7 +98,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-lg font-bold text-white">Telepon / WhatsApp</h4>
-                <p className="text-gray-400">+58 416-8346687</p>
+                <p className="text-gray-400">{settings?.contact_phone || '+62 812-3456-7890'}</p>
               </div>
             </div>
 
@@ -100,7 +108,7 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-lg font-bold text-white">Email</h4>
-                <p className="text-gray-400">attackd306@gmail.com</p>
+                <p className="text-gray-400">{settings?.contact_email || 'example@email.com'}</p>
               </div>
             </div>
 
@@ -110,8 +118,8 @@ const Contact = () => {
               </div>
               <div>
                 <h4 className="text-lg font-bold text-white">GitHub</h4>
-                <a href="https://github.com/riswanhapis" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
-                  github.com/riswanhapis
+                <a href={settings?.github_url || 'https://github.com/riswanhapis'} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
+                  {settings?.github_url ? settings.github_url.replace('https://', '') : 'github.com/riswanhapis'}
                 </a>
               </div>
             </div>
